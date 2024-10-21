@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Best - T-shirts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section id="Header">
+    <a href="#"><img src="pics/Untitled design.png" class="logo" alt="African Best Logo"></a>
+    <div>
+        <div class="hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Trending</a></li>
+            <li><a href="Videos.html">Videos</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Hero Section -->
+<section id="hero">
+    <h3>African Tshirts</h3>
+    <br>
+    <section id="group">
+    
+    
+      
+     
+          <a href="Hoodies.html" class="icon-link">
+            
+            <button class="shop-now-btn">Hoodies ></button>
+          </a>
+     
+          <a href="Paintings.html" class="icon-link">
+            
+            <button class="shop-now-btn"> Painting ></button>
+          </a>
+    </section>
+</section>
+<!-- Products Section -->
+<section id="hero3">
+    <section class="hero-1">
+        <div class="hero-grid">
+            <!-- T-shirt Item 1 -->
+            <div class="hero-item">
+                <img src="tshirts/SHATI/young guardian.jpg" alt="The Young Guardian T-shirt" class="tshirt-image">
+                <div class="price-details">
+                    <h4>Ksh 2,000</h4>
+                </div>
+                <div class="tshirt-details">
+                    <h4>The Young Guardian</h4>
+                    <!-- Link to sproduct.html with product ID 1 -->
+                    <a href="sproduct.html?id=1"><button class="price-btn">View Product</button></a>
+                </div>
+            </div>
+
+            <!-- T-shirt Item 2 -->
+            <div class="hero-item">
+                <img src="tshirts/SHATI/mother tshirt.jpg" alt="Motherland T-shirt" class="tshirt-image">
+                <div class="price-details">
+                    <h4>Ksh 2,000</h4>
+                </div>
+                <div class="tshirt-details">
+                    <h4>Motherland</h4>
+                    <!-- Link to sproduct.html with product ID 2 -->
+                    <a href="sproduct.html?id=2"><button class="price-btn">View Product</button></a>
+                </div>
+            </div>
+
+            <!-- T-shirt Item 3 -->
+            <div class="hero-item">
+                <img src="tshirts/SHATI/African tshirt.jpg" alt="African Queen T-shirt" class="tshirt-image">
+                <div class="price-details">
+                    <h4>Ksh 2,000</h4>
+                </div>
+                <div class="tshirt-details">
+                    <h4>African Queen</h4>
+                    <!-- Link to sproduct.html with product ID 3 -->
+                    <a href="sproduct.html?id=3"><button class="price-btn">View Product</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<section>
+<!-- Footer -->
+<footer>
+    <p>© 2024 African Best. All Rights Reserved.</p>
+</footer>
+</section>
+<script>
+   
+// Product Data for T-shirts (same structure as the product data in sproduct.html)
+const products = [
+    {
+        id: 1,
+        name: "The Young Guardian",
+        price: 2000,
+        image: "tshirts/SHATI/young guardian.jpg"
+    },
+    {
+        id: 2,
+        name: "Motherland",
+        price: 2000,
+        image: "tshirts/SHATI/mother tshirt.jpg"
+    },
+    {
+        id: 3,
+        name: "African Queen",
+        price: 2000,
+        image: "tshirts/SHATI/African tshirt.jpg"
+    }
+];
+
+
+;
+  function addToCart(productName, productPrice, productImage) {
+   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+   cart.push({
+       name: productName,
+       price: productPrice,
+       image: productImage,
+       quantity: 1
+   });
+
+   console.log("Cart updated:", cart);  // Log the cart data
+
+   localStorage.setItem("cart", JSON.stringify(cart));
+
+   window.location.href = "cart.html";
+}
+
+
+</script>
+<script type="module" src="./js.js">
+</script>
+</body>
+</html>

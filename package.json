@@ -1,0 +1,25 @@
+{
+  "name": "html-project",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.5",
+    "dotenv": "latest",
+    "gauge": "^5.0.2",
+    "glob": "^11.0.0",
+    "npmlog": "^7.0.1",
+    "path-to-regexp": "^8.2.0",
+    "rimraf": "^6.0.1",
+    "undici": "^6.20.1",
+    "uuid": "^10.0.0",
+    "vercel": "^37.11.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.9"
+  }
+}

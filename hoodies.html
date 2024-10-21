@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Best</title>
+    <link rel="stylesheet" href="style.css">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      </head>
+      
+
+<body>
+
+</section>
+<section id="Header">
+    <a href="#"><img src="pics/Untitled design.png" class="logo" alt="African Best Logo"></a>
+    <div>
+        <div class="hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Trending</a></li>
+            <li><a href="Videos.html">Videos</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+        </ul>
+    </div>
+</section>
+
+</section>
+
+
+<section id="hero">
+  <h3>African Hoodies</h3>
+  <br>
+  
+  <section id="group">
+    <a href="tshirts.html" class="icon-link">
+       
+        <button class="shop-now-btn"> Tshirts ></button>
+      </a>
+ 
+
+ 
+      <a href="Paintings.html" class="icon-link">
+        
+        <button class="shop-now-btn"> Painting ></button>
+      </a>
+  
+    </section>
+  </section>
+  
+
+  
+ 
+    <section id="hero3">
+    <section class="hero-1">
+      <div class="hero-grid">
+          <!-- Hero Image 1 -->
+          <div class="hero-item">
+              <img src="tshirts/SHATI/young hoodie.jpg" alt="Masai Shirt" class="tshirt-image">
+  <div
+               class="price-details">
+                    <h4>Ksh 4,500 </h4>
+  
+            </div>
+              <div class="tshirt-details">
+                <h4>The Young Guardian   </h4>
+                <a href="sproduct.html?id=4"><button class="price-btn">View Product</button></a>
+                </div>
+              </div>
+           
+      
+            <!-- T-shirt Item 2 -->
+            <div class="hero-item">
+              <img src="tshirts/SHATI/mother hoodie.jpg" alt="Masai Shirt" class="tshirt-image">
+              <div
+              class="price-details">
+                   <h4>Ksh 4,500 </h4>
+  
+                  </div>
+              <div class="tshirt-details">
+                <h4>Motherland</h4>
+                <a href="sproduct.html?id=5"><button class="price-btn">View Product</button></a>
+              </div>
+              </div>
+  
+      
+          
+     <!-- T-shirt Item 4 -->
+     <div class="hero-item">
+      <img src="tshirts/SHATI/guardian hoodie.jpg" alt="Masai Shirt" class="tshirt-image">
+  
+      <div class="price-details">
+            <h4>Ksh 4,500 </h4>
+      </div>
+      <div class="tshirt-details">
+  
+        <h4>Guardians of the Land</h4>
+      
+        <a href="sproduct.html?id=6"><button class="price-btn">View Product</button></a>
+                </div>
+   
+
+    </div>
+  
+    <div class="hero-item">
+      <img src="tshirts/SHATI/african hoodie.jpg" alt="Masai Shirt" class="tshirt-image">
+  
+      <div class="price-details">
+            <h4>Ksh 4,500 </h4>
+      </div>
+      <div class="tshirt-details">
+  
+        <h4>African Queen </h4>
+     
+        <a href="sproduct.html?id=7"><button class="price-btn">View Product</button></a>
+                </div>
+              </div>
+      </div>
+    </section>
+    <section>
+    
+  
+  
+           
+        <script>
+   
+          // Product Data for T-shirts (same structure as the product data in sproduct.html)
+          const products = [
+              {
+                  id: 4,
+                  name: "The Young Guardian",
+                  price: 4500,
+                  image: "tshirts/SHATI/young hoodie.jpg"
+              },
+              {
+                  id: 5,
+                  name: "Motherland",
+                  price: 4500,
+                  image: "tshirts/SHATI/mother hoodie.jpg"
+              },
+              {
+                  id: 6,
+                  name: "Guardians of the Land",
+                  price: 4500,
+                  image: "tshirts/SHATI/guardian hoodie.jpg"
+              },
+              {
+                  id: 7,
+                  name: "African Queen",
+                  price: 4500,
+                  image: "tshirts/SHATI/african hoodie.jpg"
+              }
+          ];
+         
+        
+  function addToCart(productName, productPrice, productImage) {
+   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+   cart.push({
+       name: productName,
+       price: productPrice,
+       image: productImage,
+       quantity: 1
+   });
+
+   console.log("Cart updated:", cart);  // Log the cart data
+
+   localStorage.setItem("cart", JSON.stringify(cart));
+
+   window.location.href = "cart.html";
+}
+
+
+          </script>
+       <script type="module" src="./js.js"></script>
+      

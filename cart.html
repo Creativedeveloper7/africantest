@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Best - Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section id="Header">
+    <a href="#"><img src="pics/Untitled design.png" class="logo" alt="African Best Logo"></a>
+    <div>
+        <div class="hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Trending</a></li>
+            <li><a href="Videos.html">Videos</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Cart Items Section -->
+<section id="cart">
+    <h3>Your Cart</h3>
+    <div id="cart-items" class="cart-items">
+        <!-- Cart items will be dynamically inserted here -->
+
+
+    </div>
+  
+   
+    <div id="coupon">
+        <div>
+            <input type="text" placeholder="Enter Coupon Code">
+            <button class="normal">Apply Coupon</button>
+        </div>
+    </div>
+
+    <div class="subtotal">
+        <table>
+            <tr>
+                <td></td>
+                <td id="subtotal-amount">0</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td id="total-amount">0</td>
+            </tr>
+        </table>
+    </div>
+
+        <div id="normal">
+        <button class="normal">Proceed to Checkout</button>
+    </div>
+</div>
+</section>
+
+
+<script>
+  let cart = [];
+
+// Load the cart from localStorage on page load
+window.addEventListener('load', function () {
+    let savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+        displayCartItems();
+    }
+});
+
+// Display the cart items in the cart-items section
+function displayCartItems() {
+    const cartItemsDiv = document.getElementById('cart-items');
+    cartItemsDiv.innerHTML = ''; // Clear the existing cart items
+
+    let subtotal = 0;
+
+    if (cart.length === 0) {
+        cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+        document.getElementById('subtotal-amount').textContent = 'Ksh 0';
+        document.getElementById('total-amount').textContent = 'Ksh 0';
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        // Ensure both price and quantity are valid numbers before performing calculations
+        const price = parseFloat(item.price);
+        const quantity = parseInt(item.quantity);
+
+        if (!isNaN(price) && !isNaN(quantity)) {
+            subtotal += price * quantity;
+        }
+
+        let cartItemDiv = document.createElement('div');
+        cartItemDiv.classList.add('cart-item');
+        cartItemDiv.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <h4>${item.name}</h4>
+           <span>Ksh ${price}</span>
+            <input type="number" value="${quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+            <span>Ksh ${(price * quantity).toLocaleString()}</span>
+            <i class="fa fa-trash" onclick="removeFromCart(${index})"></i>
+        `;
+        cartItemsDiv.appendChild(cartItemDiv);
+    });
+
+    // Update subtotal and total
+    document.getElementById('subtotal-amount').textContent = `Ksh ${subtotal.toLocaleString()}`;
+    document.getElementById('total-amount').textContent = `Ksh ${subtotal.toLocaleString()}`;
+}
+
+// Update the quantity of a specific cart item
+function updateQuantity(index, newQuantity) {
+    newQuantity = parseInt(newQuantity);
+
+    // Ensure newQuantity is a valid number greater than 0
+    if (!isNaN(newQuantity) && newQuantity > 0) {
+        cart[index].quantity = newQuantity;
+        saveCart();
+        displayCartItems();
+    } else if (newQuantity <= 0) {
+        removeFromCart(index);
+    }
+}
+
+// Remove an item from the cart
+function removeFromCart(index) {
+    cart.splice(index, 1); // Remove item at index
+    saveCart();
+    displayCartItems();
+}
+
+// Save cart to localStorage
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+
+    
+</script>
+<script type="module" src="./js.js"></script>
+</body>
+</html>

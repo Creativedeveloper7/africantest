@@ -1,0 +1,1452 @@
+
+/* index.html */
+#Header {
+  position: fixed; /* Fix the header to the top */
+  top: 0; /* Align to the top of the viewport */
+  left: 0; /* Align to the left of the viewport */
+  right: 0; /* Align to the right of the viewport */
+ 
+  z-index: 1000; /* Ensure it's on top of other content */
+  padding: 0px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+body {
+  font-family: century gothic;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+/* The container of the video */
+#hero-2{
+  align-items: center;
+}
+  #video-background {
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Full viewport height */
+}
+
+.video-container2 {
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Styling the video to fill the entire container */
+.video-container2 video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -14; /* Send the video behind content */
+  object-fit: cover;
+  opacity: 20%;
+}
+
+/* Content overlay on top of the video */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+/* Default styling for desktop */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  grid-gap: 20px; /* Space between grid items */
+  margin-top: 20px;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically in grid item */
+  align-items: center;
+  text-align: start;
+  border: 1px solid none;
+  padding: 15px;
+  border-radius: 8px;
+  background-color:#111111;
+}
+
+.news-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 200px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+.news-icon img{
+  border-radius: 2px;
+}
+
+.news-content {
+  max-width: 100%;
+}
+
+.news-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.news-description {
+  margin-top: 10px;
+}
+
+.read-more {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.read-more {
+  color: #dd6f15;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for mobile */
+@media (max-width: 768px) {
+  .news-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  .news-icon {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+  }
+  
+  .news-content {
+      width: 100%;
+  }
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.news-item img {
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+  border-radius: 5%;
+}
+.news-content {
+  max-width: 600px;
+}
+.news-content h2 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+.news-content p {
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+.news-content a {
+  color: #008080;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding:30px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: century gothic;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navbar styling */
+  #navbar {
+   list-style: none;
+    display: flex;
+    padding: 50px; 
+    justify-content: center;
+    gap: 180px;
+    position: relative; /* Ensure navbar is positioned relative */
+    z-index: 1; /* Set a higher z-index to position above the video */
+    background-color: #ffffff;
+    opacity: 20%;
+    margin-top: 0.1%;
+    opacity: 100%;
+box-shadow: #008080;
+
+    
+}
+
+.navbar li {
+    margin-right: 80px;
+    justify-items: center;
+    gap: 20px;
+    margin-top: 20px;
+
+    
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: black;
+}
+.logo {
+    position: absolute;     /* Absolute positioning to place it in the top-left corner */
+    top: 10px;              /* Distance from the top of the page */
+    left: 10px;             /* Distance from the left of the page */
+    width: 100px;           /* Set a specific width for the logo */
+    height: auto;           /* Maintain aspect ratio */
+    z-index: 1000;          /* Ensure it's on top of other elements like the navbar */
+  }
+  
+.styled-button:active {
+  color: #008080;
+}
+/* Hamburger menu icon styling */
+
+
+
+/* Navbar visibility on mobile */
+@media (max-width: 768px) {
+    /* Hide the default navbar on smaller screens */
+    #navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }}
+  
+  /* Hamburger icon styling */
+  .hamburger {
+    display: none;
+    color: #ddd;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .hamburger i {
+    color: #fff;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide the navbar links on mobile */
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      width: 100%;
+    }
+  
+    .navbar.show .nav-links {
+      display: flex; /* Show the navbar links when the hamburger icon is clicked */
+    }
+  
+    .hamburger {
+      display: flex; /* Show the hamburger icon on mobile */
+      justify-content: flex-end;
+      padding: 10px;
+    }
+  }
+  #header {
+    display: flex;
+    justify-content: space-between;
+  align-items: center; /* Aligns items vertically centered */
+  padding: 10px 20px;
+  border-bottom: #008080;
+  box-shadow: #008080;
+  }
+.logo{
+    width: 250px;
+    height: auto;
+}
+
+
+/* Hero section */
+#hero {
+    padding: 100px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+   margin-bottom: 30px;
+}
+#hero .video-grid{
+  display: grid;
+}
+
+#hero h1 {
+    font-size: 64px;
+    font-weight: 200;
+    margin-bottom: px;
+    font-family:sans-serif merriweather;
+    color:#DD9200;
+ margin-top: 60px;
+}
+.hero p{
+font-family: sans-serif;
+    color: #DD9200;
+    margin-bottom: 130px;
+}
+
+#hero p {
+    font-family: century gothic;
+    font-size: 1.1em;
+    line-height: 1.6;
+margin-bottom: 30px;
+
+}
+
+#footer{
+
+text-align: center;
+margin-bottom: 40px;
+display: block;
+border: white;
+border-radius: 5px;
+}
+#footer h1{
+width: 100%;
+margin-bottom: 0px;
+font-family: century gothic;
+color: #e9e9e9;
+font-weight: 600;
+font-size: 400px;
+object-fit: cover;
+display: block;
+}
+#footer2 img{  
+    width: 100%;
+    height: auto;
+    
+    object-fit: cover;
+    text-align: center;
+    margin-bottom: 0px;
+    font-family: century gothic;
+    color: #e9e9e9;
+    font-weight: 600;
+    font-size: 170px;
+    object-fit: cover;
+    display: flex;
+  
+}
+
+#border {
+ font-size: 64px;
+}
+
+#border img{
+    
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+   
+
+
+
+
+/* Body styling */
+body {
+    font-family: century gothic;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Styling the hero section */
+#paragraph {
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    border:white;
+    max-width: 800px;
+    margin: 20px auto;
+    text-decoration: none;
+}
+
+/* H1 headings */
+#paragraph h1 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+         /* Inherit text color from parent */
+    text-decoration: none;  /* Remove underline */
+    pointer-events: none;   /* Disable clicking on links */
+    cursor: default;        /* Change the cursor to default (not a pointer) */
+}
+
+/* Paragraphs */
+#paragraph p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #7f8c8d;
+    
+}
+
+/* Unordered list for collagen benefits */
+#paragraph ul {
+    margin: 10px 0 20px 40px;
+}
+
+#paragraph ul li {
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 8px;
+}
+#footer{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+
+}
+
+/* Make the image responsive */
+#footer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensures the image fits well within its container */
+    border-radius: 45px; /* Optional: gives rounded corners */
+}
+
+
+/*blog.html*/
+
+body {
+    font-family: century gothic;
+   
+    background: cover;
+
+}
+#hero2 {
+width: 50%;
+flex-wrap: wrap;
+justify-content: center;
+display: flex;
+
+}
+
+#hero2 img{
+width: 500px;
+
+box-shadow: #DD9200;
+border-radius: 10px;
+
+cursor: pointer;
+}
+
+#hero2 h1 {font-family:century gothic;
+    font-size: 25px;
+    font-weight:500;
+color:#f0f0f0;
+margin-top: 5%;
+border: #ffffff;
+box-shadow: #ddd;
+font-weight: bolder;
+
+}
+
+
+.hover-img {
+    width: 300px;
+    height: auto;
+
+    border-radius: 10px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hover-img:hover {
+    border-color: #DD9200; /* Green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+#hero2 h2 {  
+    font-size: 24px;
+    font-weight:500;
+color: #ddd;
+
+}
+.styled-button {
+    background-color:  #168d8f; /* Green */
+    border: none;
+    color: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 14px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .styled-button:hover {
+    background-color: #f6a02a;
+    transform: scale(1.05);
+  }
+  
+  .styled-button:active {
+    background-color:#168d8f;
+    transform: scale(0.95);
+  }
+#hero2 p {
+
+    margin-top: 0%;
+}
+#hero h3{
+    font-size: 12px;
+    color: #f0f0f0;
+    font-weight: 200;
+    font-family: century gothic;
+    box-shadow:  rgb( rgb(201, 131, 0));
+    border-style: none;
+    text-align: start;
+ display: flex;
+ padding: 20px 40px;
+ margin-bottom: 0px;
+ background-color: #1b1b1b;
+ background-color: #168d8f;
+ font-size: 20px;
+ display: inline-flex;
+}
+
+
+
+
+body {
+    font-family: century gothic;
+    margin: 0;
+    padding: 20px;
+    background-color: #080808;
+    font-weight: 200;
+    font-size: 14px;
+  
+    background-image: url(POSTERS/LATEST\ COLLECTION\ \(2\).png);
+    background-size: cover;
+  }
+ 
+
+
+  
+  /* Video Grid */
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 per row on desktop, flexible on smaller screens */
+    gap: 20px; /* Space between the videos */
+    max-width: 1900px; /* Maximum width for the grid container */
+    margin: 0 10px;
+    align-content: center;
+   align-items: center;
+   justify-content: space-between;
+   
+  }
+  
+   
+  
+  /* Video Container */
+  .video-container {
+    background-color: rgb(20, 20, 20);
+    border-radius: 0px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .video-container:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+  }
+  
+  /* Video Player Styling */
+  video {
+    width: 100%;
+    display: block;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  /* Video Title */
+  .video-title {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: start;
+    background-color: #000000; /* Green background */
+    color: white;
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+  }
+  
+
+
+  @media (max-width: 768px) {
+    .tshirt-grid {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+
+  
+  
+
+
+
+
+/* shop.html */
+
+/* Basic styling for the header */
+#header2 {
+    width: 100%;
+  height: 200px; /* You can adjust the height of the header */
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* This ensures that the image does not overflow the header bounds */
+  }
+  
+  /* Header image styling */
+  .header2 img {
+    width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 100%; /* Make sure the image fits within the header height */
+  object-fit: cover; /* This makes sure the image covers the header area without distortion */
+  }
+  
+  /* Optional: Media query to adjust header size on smaller devices */
+  @media (max-width: 768px) {
+    .header2 {
+      height: 200px; /* Adjust header size for smaller screens */
+    }
+}
+
+
+    #hero3{ 
+      
+    
+       align-items: center;
+       align-content: center;
+
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+       
+        margin-top: 50px;
+        list-style: none;
+    text-align: center;
+    margin: 0,auto;
+     
+  font-size: 15px;
+      width: 100%;
+    height: auto;
+    
+    justify-content: center;
+    display: flex;
+    gap: 70px;
+
+    }
+    
+    
+  
+        
+    
+        
+
+
+   
+/* shop.html */
+
+/* Styling for the clickable image icon */
+.icon-link {
+    display: inline-block;
+    text-decoration: none; /* Remove underline on image */
+  }
+  
+  .icon-image {
+    width: 200px; /* Adjust the size of the image */
+    height: auto; /* Ensure the image is square or use auto for dynamic sizing */
+    border-radius: 5%; /* Makes the image circular */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+  
+  /* Hover effect to scale and add shadow */
+  .icon-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }
+
+
+    /* Styling for the Shop Now button */
+.shop-now-btn {
+    display: block;
+    margin-top: 10px; /* Space between image and button */
+    padding: 10px 20px;
+    background-color:black;
+border-color: #969696;
+   border-style: inherit;
+    border-radius: px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  .shop-now-btn:hover {
+    background-color:#168d8f; /* Darken the button color on hover */
+  }
+
+
+#hero5 {
+    width: 100%;
+    height: auto;
+    margin-top: 0%;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+
+
+
+}
+  #hero5 h3{
+    font-size: 16px;
+    color: #f0f0f0;
+    font-weight: 200;
+    font-family: century gothic;
+    box-shadow:  rgb( rgb(201, 131, 0));
+    border-style: none;
+    text-align: start;
+ display: inline-block;
+ padding: 20px 40px;
+ margin-bottom: 30px;
+    background-color: #1b1b1b;}
+
+ 
+
+/* tshirt.html */
+/* General styles for the grid */
+#body{background-color: #008080;
+
+}
+.tshirt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* T-shirt container styles */
+.tshirt-container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.tshirt-container:hover {
+  transform: scale(1.05);
+}
+
+/* Image styling */
+.tshirt-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Price details */
+.price-details {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 100;
+  color:#e7e7e7;
+  background-color:#06191a;
+  text-align: left;
+  padding-left: 20px;
+}
+.tshirt-details{
+  font-size: 12px;
+  color: #e9e9e9;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: lighter;
+  font-family:century gothic;
+}
+.tshirt-details button{
+  font-size: 9px;
+  background-color: #008080;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 20px 5px 10px;
+  box-shadow: #000000;
+}
+.button:hover{
+
+ transform: scale(1.05);
+ background-color: #dd6f15;
+}
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .tshirt-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+/* sproduct.html */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: century gothic;
+}
+
+body {
+  padding: 40px;
+align-content: center;
+ 
+}
+
+/* Existing styles */
+
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  
+  margin: 70px auto;
+  background-color: none;
+  border: solid  none;
+  padding: 0px;
+  box-shadow: 0 4px px rgba(99, 99, 99, 0.1);
+  border-radius: 8px;
+}
+
+/* Mobile layout adjustment */
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    height: auto; /* Stack image and details vertically */
+    align-items: start;
+  }
+
+  .product-image img {
+    max-width: 100%; /* Make the image responsive */
+    margin-bottom: px; /* Add space between image and details */
+  }
+
+  .product-details {
+    text-align: start; 
+    font-size: 10px;/* Center-align the product details */
+  }
+
+  .product-details h1 {
+    font-size: 17px; /* Reduce font size for better mobile display */
+  }
+
+  select, input[type="number"] {
+    width: 10%; /* Make inputs take full width on mobile */
+    margin-bottom: 15px;
+  }
+}
+
+
+
+.product-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 5%;
+}
+
+.product-details {
+  max-width: 100%;
+  margin-left: 20px;
+  margin-top: 15%;
+}
+
+.product-details h1 {
+  font-family: century gothic;
+  font-size: 25px;
+ 
+  margin-bottom: 10px;
+}
+
+.product-details .price {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: #f6a02a;
+  margin-bottom: 15px;
+}
+
+.product-details .description {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+button.add-to-cart {
+  background-color: #168d8f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button.add-to-cart:hover {
+  background-color: #f6a02a;
+}
+
+/* Styling for the select dropdown */
+select {
+  text-align: center;
+  width: 100px;
+
+  border-radius: 4px;
+
+ 
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease;
+  
+}
+
+select:hover, select:focus {
+  border-color:white;
+}
+
+/* Styling for the input number field */
+input[type="number"] {
+
+
+  margin-top: 10px;
+  border-radius: 2px;
+  border: 1px solid  #168d8f;
+  font-size: 12px;
+  color:  #ffffff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:hover, input[type="number"]:focus {
+  border-color: #168d8f;
+}
+
+/* Optional: Style the container holding both elements */
+.container {
+  display:100%;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Adding some responsiveness */
+@media (max-width: 768px) {
+    #paragraph h1 {
+        font-size: 20px;
+    }
+
+    #paragraph p, #paragraph ul li {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Stack header elements vertically */
+    #Header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Stack navbar items vertically */
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navbar li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust hero section font size for mobile */
+    #hero h1 {
+        font-size: 1.8em;
+    }
+
+ 
+    }
+#footer h1{
+    font-size: 1.8em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+
+    /* Make video full width on smaller screens */
+    #media-section video {
+        max-width: 100%;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Style for the container */
+    #border {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    
+    
+    }
+    
+    /* Make the image responsive */
+    #border img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover; /* Ensures the image fits well within its container */
+        border-radius: 5px; /* Optional: gives rounded corners */
+    }
+    
+    /* Mobile responsive design */
+    @media screen and (max-width: 768px) {
+        #border {
+            max-width: 100%;
+            padding: 5px;
+        }
+    }
+    
+    /* Smaller screens (phones) */
+    @media screen and (max-width: 480px) {
+        #border {
+            padding: 2px;
+        }
+    
+        #border img {
+            border-radius: 3px; /* Slightly smaller border-radius for mobile */
+        }
+    }
+#image-slider {
+    width: 100%;
+    height: auto;
+    max-width: auto;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height:400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: auto; /* Adjust width based on the number of slides (100% * number of slides) */
+    animation: slideAnimation 12s infinite;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Keyframes for the sliding animation */
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Mobile responsive design */
+@media screen and (max-width: 768px) {
+    #footer {
+        max-width: 100%;
+        padding: 5px;
+    }
+}
+
+/* Smaller screens (phones) */
+@media screen and (max-width: 480px) {
+    #footer {
+        padding: 2px;
+    }
+
+    #footer img {
+        border-radius: 3px; /* Slightly smaller border-radius for mobile */
+    }
+
+
+
+}
+
+/* Cart Section */
+
+#cart {
+width: 100%;
+
+ margin-top: 100%;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+ 
+ gap: 20%;
+  margin: 170px auto;
+  background-color: none;
+  border: solid  none;
+  padding: 0px;
+
+
+}
+
+
+#cart h3 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 2rem;
+  font-family: century gothic;
+  color: #ddd;
+}
+
+
+.cart-item {
+
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+  color: #ddd;  
+    border-bottom: 1px solid #ddd;
+    gap: 1.5rem; /* Adds gap between the elements */
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item h4 {
+  display: table-column;
+  font-size: 12px;
+flex: none;
+ 
+  color: #ddd;
+}
+
+.cart-item input {
+  width: 50px;
+ gap: 30px;
+  border-radius: 2px;
+ color: #ddd;
+  margin-right: px;
+}
+
+.cart-item .fa-trash {
+  color:#e6e6e6;
+  cursor: pointer;
+}
+
+.cart-item .fa-trash:hover {
+  color:#dd6f15;
+}
+
+/* Coupon Section */
+#coupon, .subtotal {
+  display: flex;
+  margin-top:20px;
+  padding: 20px;
+  
+}
+
+#coupon input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#coupon button {
+  padding: 0.5rem 1rem;
+  background-color: #008080;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.subtotal table {
+align-items: center;
+  margin-top: 3rem;
+  margin-left: 20px;
+
+ border-color: #1b1b1b;
+  font-family: century gothic;
+  padding: 40px 70px 40px 100px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  box-shadow: 40px 10px 3px 10px 40px;
+}
+
+.subtotal td {
+  font-weight:400;
+color: #ddd;
+  font-size: 15px;
+}
+
+#normal button {
+ box-shadow: #969696;
+  padding: 0.5rem 1rem;
+  background-color: #008080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+margin-left: 160px;
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cart-items {
+      grid-template-columns: 1fr;
+  }
+
+  #Header ul {
+      display: none;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  #coupon {
+      flex-direction: column;
+  }
+
+  #coupon input {
+      width: 100%;
+      margin-bottom: 1rem;
+  }
+}
+
+/* Hero Section Styles */
+#hero-1 {
+  padding: 40px;
+  background-color: #f4f4f4;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 800px;
+}
+
+.hero-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #3f3f3f;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.hero-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-item:hover{
+  transform: scale(1.05);
+}
+.hero-item button{background-color: none;
+color: #f3f3f3;
+padding: 5px 20px 5px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.hero-item button:hover{
+  transform: scale(1.05);
+  background-color:#008080;
+
+}
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .hero-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-grid {
+      grid-template-columns: 1fr;
+  }
+}
+#hero button{
+  box-shadow: #969696;
+  padding: 1rem 3rem;
+  background-color: #008080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+
+}
+/* Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  position: relative;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

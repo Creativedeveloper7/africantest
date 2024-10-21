@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Best - Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<section id="Header">
+  <a href="#"><img src="pics/Untitled design.png" class="logo" alt="African Best Logo"></a>
+  <div>
+    <div class="hamburger" id="hamburger">
+        <i class="fa fa-bars"></i>
+    </div>
+    <ul id="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="blog.html">Trending</a></li>
+      <li><a href="Videos.html">Videos</a></li>
+      <li><a href="Shop.html">Shop</a></li>
+      <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Product Page Content -->
+<div class="product-container">
+  <!-- Product Image on the Left -->
+  <div class="product-image">
+    <img id="product-image" src="" alt="Product Image" />
+  </div>
+
+  <!-- Product Details on the Right -->
+  <div class="product-details">
+    <h1 id="product-name">Product Name</h1>
+    <select>
+      <option>Select Size</option>
+      <option>Small</option>
+      <option>Medium</option>
+      <option>Large</option>
+      <option>XL</option>
+      <option>XXL</option>
+    </select>
+    <input type="number" value="1" min="1">
+    <p id="product-price" class="price">Kes 0</p>
+    <p id="product-description" class="description">Product description here.</p>
+    <button id="add-to-cart" class="add-to-cart">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 African Best. All Rights Reserved.</p>
+</footer>
+
+<script>// Get the product ID from the URL
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get("id");
+  
+  // Define product data (can be fetched from a backend or database in a real project)
+  const products = [
+      {
+          id: "1",
+          name: "The Young Guardian",
+          price: "2000",
+          description: "This is the Young Guardian white t-shirt, a stylish and durable garment for every occasion.",
+          image: "tshirts/SHATI/young guardian.jpg",
+          sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+      },
+      {
+          id: "2",
+          name: "Motherland",
+          price: " 2000",
+          description: "The Motherland t-shirt is a tribute to African heritage, crafted with comfort and elegance.",
+          image: "tshirts/SHATI/mother tshirt.jpg",
+          sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+      },
+      {
+          id: "3",
+          name: "African Queen",
+          price: " 2000",
+          description: "Celebrate African beauty with the African Queen t-shirt, made with premium quality fabric.",
+          image: "tshirts/SHATI/African tshirt.jpg",
+          sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+      },
+
+      {
+          id: "4",
+          name: "The Young Guardian",
+          price: " 4500",
+          description: "This is the Young Guardian white Hoodie, a stylish and durable garment for every occasion.",
+          image: "tshirts/SHATI/young hoodie.jpg",
+          sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+      },
+      {
+          id: "5",
+          name: "Motherland",
+          price: " 4500",
+          description: "The Motherland Hoodie is a tribute to African heritage, crafted with comfort and elegance.",
+          image: "tshirts/SHATI/mother hoodie.jpg",
+          sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+      },
+      {
+          id: "6",
+          name: "African Queen",
+          price: " 4500",
+          description: "Celebrate African beauty with the African Queen Hoodie, made with premium quality fabric.",
+          image: "tshirts/SHATI/guardian hoodie.jpg",
+          sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+      },
+
+      {
+          id: "7",
+          name: "African Queen",
+          price: "4500",
+          description: "Celebrate African beauty with the African Queen Hoodie, made with premium quality fabric.",
+          image: "tshirts/SHATI/african hoodie.jpg",
+          sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+      },
+      {
+                  id: "8",
+                  name: "The Young Guardian",
+                  price: "6500",
+                  description: "Celebrate African beauty with the African Queen Painting, made with premium quality fabric.",
+                  image: "tshirts/SHATI/MOTHER2.png",
+                  sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+              },
+              {
+                  id: "9",
+                  name: "Motherland",
+                  price: "6500",
+                  description: "Celebrate African beauty with the African Queen Painting, made with premium quality fabric.",
+                  image: "tshirts/SHATI/MOTHER 1.png",
+                  sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+              },
+              {
+                  id: "10",
+                  name: "Motherland II",
+                  price: "6500",
+                  description: "Celebrate African beauty with the African Queen Painting, made with premium quality fabric.",
+                  image: "tshirts/SHATI/MOTHER2.png",
+                  sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+              },
+              {
+                  id: "11",
+                  name: "African Queen",
+                  price: "4500",
+                  image: "tshirts/SHATI/QUEEN.png",
+                  description: "Celebrate African beauty with the African Queen Painting, made with premium quality fabric.",
+                  sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+                },
+              
+              {
+                  id: "12",
+                  name: "Young Guardian II",
+                  price: "6500",
+                  image: "tshirts/SHATI/YOUNG PAINT (1).png",
+                  sizes: ["Small", "Medium", "Large", "XL", "XXL"]
+              }
+
+  ];
+  
+  // Find the product by ID
+  const product = products.find(item => item.id === productId);
+  
+  // If the product is found, update the page with the product details
+  if (product) {
+      document.querySelector(".product-image img").src = product.image;
+      document.querySelector(".product-details h1").textContent = product.name;
+      document.querySelector(".product-details .price").textContent = product.price;
+      document.querySelector(".product-details .description").textContent = product.description;
+  
+      // Populate size options
+      const sizeSelect = document.querySelector(".product-details select");
+      product.sizes.forEach(size => {
+          const option = document.createElement("option");
+          option.value = size;
+          option.textContent = size;
+          sizeSelect.appendChild(option);
+      });
+  } else {
+      // If the product is not found, show an error message
+      document.querySelector(".product-details h1").textContent = "Product not found";
+      document.querySelector(".product-details .price").style.display = "none";
+      document.querySelector(".product-details .description").textContent = "We couldn't find the product you're looking for.";
+      document.querySelector(".product-image img").src = "default-product-image.jpg"; // Default image in case of missing product
+  }
+  
+  // Add to Cart functionality
+  document.querySelector(".add-to-cart").addEventListener("click", () => {
+      if (product) {
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+          // Check if the product is already in the cart
+          const existingProduct = cart.find(item => item.id === product.id);
+  
+          if (existingProduct) {
+              existingProduct.quantity += 1; // Increase quantity if already in the cart
+          } else {
+              // Add new product to cart
+              cart.push({
+                  id: product.id,
+                  name: product.name,
+                  price: product.price,
+                  image: product.image,
+                  quantity: 1
+              });
+          }
+  
+          // Save updated cart to localStorage
+          localStorage.setItem("cart", JSON.stringify(cart));
+  
+          // Redirect to cart page
+          window.location.href = "cart.html";
+      }
+  });
+</script>
+
+
+<script type="module" src="./js.js">
+
+</script>
+
+</body>
+</html>
