@@ -1,64 +1,103 @@
+
 {
   "products": [
     {
-      "name": "The Young Guardian",
+      "id": "1",
+      "name": "The Young Guardian T-Shirt",
       "price": 2000,
-      "image_url": "tshirts/SHATI/young guardian.jpg"
+      "description": "This is the Young Guardian white t-shirt, a stylish and durable garment for every occasion.",
+      "image": "tshirts/SHATI/young_guardian.jpg",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "Motherland",
+      "id": "2",
+      "name": "Motherland T-Shirt",
       "price": 2000,
-      "image_url": "tshirts/SHATI/mother tshirt.jpg"
+      "description": "The Motherland t-shirt is a tribute to African heritage, crafted with comfort and elegance.",
+      "image": "tshirts/SHATI/mother_tshirt.jpg",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "African Queen",
+      "id": "3",
+      "name": "African Queen T-Shirt",
       "price": 2000,
-      "image_url": "tshirts/SHATI/African tshirt.jpg"
+      "description": "Celebrate African beauty with the African Queen t-shirt, made with premium quality fabric.",
+      "image": "tshirts/SHATI/african_tshirt.jpg",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "The Young Guardian",
+      "id": "4",
+      "name": "The Young Guardian Hoodie",
       "price": 4500,
-      "image_url": "tshirts/SHATI/young hoodie.jpg"
+      "description": "This is the Young Guardian white hoodie, a stylish and durable garment for every occasion.",
+      "image": "tshirts/SHATI/young_hoodie.jpg",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "Motherland",
+      "id": "5",
+      "name": "Motherland Hoodie",
       "price": 4500,
-      "image_url": "tshirts/SHATI/mother hoodie.jpg"
+      "description": "The Motherland hoodie is a tribute to African heritage, crafted with comfort and elegance.",
+      "image": "tshirts/SHATI/mother_hoodie.jpg",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "Guardians of the Land",
+      "id": "6",
+      "name": "African Queen Hoodie",
       "price": 4500,
-      "image_url": "tshirts/SHATI/guardian hoodie.jpg"
+      "description": "Celebrate African beauty with the African Queen hoodie, made with premium quality fabric.",
+      "image": "tshirts/SHATI/african_hoodie.jpg",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "African Queen",
+      "id": "7",
+      "name": "African Queen Hoodie (Variant)",
       "price": 4500,
-      "image_url": "tshirts/SHATI/african hoodie.jpg"
+      "description": "Celebrate African beauty with the African Queen hoodie, made with premium quality fabric.",
+      "image": "tshirts/SHATI/queen_hoodie.jpg",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "c",
+      "id": "8",
+      "name": "The Young Guardian Painting",
       "price": 6500,
-      "image_url": "tshirts/SHATI/YOUNG PAINT (2).png"
+      "description": "The Young Guardian painting, a visual tribute to African culture, crafted with premium materials.",
+      "image": "tshirts/SHATI/young_guardian_painting.png",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "Motherland",
+      "id": "9",
+      "name": "Motherland Painting",
       "price": 6500,
-      "image_url": "tshirts/SHATI/MOTHER 1.png"
+      "description": "The Motherland painting, celebrating African beauty and heritage with intricate craftsmanship.",
+      "image": "tshirts/SHATI/mother_painting.png",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "Motherland II",
+      "id": "10",
+      "name": "Motherland II Painting",
       "price": 6500,
-      "image_url": "tshirts/SHATI/MOTHER2.png"
+      "description": "A second variant of the Motherland painting, showcasing the diversity and elegance of Africa.",
+      "image": "tshirts/SHATI/mother2_painting.png",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "African Queen",
-      "price": 6500,
-      "image_url": "tshirts/SHATI/QUEEN.png"
+      "id": "11",
+      "name": "African Queen Painting",
+      "price": 4500,
+      "description": "Celebrate African beauty with the African Queen painting, a perfect piece for art lovers.",
+      "image": "tshirts/SHATI/queen_painting.png",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     },
     {
-      "name": "Young Guardian",
+      "id": "12",
+      "name": "Young Guardian II Painting",
       "price": 6500,
-      "image_url": "tshirts/SHATI/YOUNG PAINT (1).png"
+      "description": "The Young Guardian II painting, another stunning tribute to African cultural heritage.",
+      "image": "tshirts/SHATI/young_guardian2_painting.png",
+      "sizes": ["Small", "Medium", "Large", "XL", "XXL"]
     }
   ]
 }
+
+  
