@@ -40,20 +40,21 @@
 </section>
 
 
-<section id="hero">
-<h3>African Painting</h3>
-<br>
-<section id="icon-link">
+<section id="banner">
+  <img src="pics/Untitled (1440 x 270 px) (13).png" alt="">
+  </section>
+  <br>
+  <section id="button-container">
     
     
       
      
-  <a href="tshirts.html" class="icon-link">
+  <a href="tshirts.html" class="icon-link2">
     
     <button class="shop-now-btn">Tshirts ></button>
   </a>
 
-  <a href="hoodies.html" class="icon-link">
+  <a href="hoodies.html" class="icon-link2">
     
     <button class="shop-now-btn"> Hoodies ></button>
   </a>
@@ -140,8 +141,15 @@
       <h4>Young Guardian II</h4>
       <a href="sproduct.html?id=12"><button class="price-btn">View Product</button></a>
 
+    </div>
+  </section>
+      <br>
 
-
+      <section id="banner">
+      <img src="pics/Untitled (1440 x 270 px) (3).png" alt="">
+      </section>
+      <br>
+      
 
 
 
@@ -199,6 +207,15 @@
 
    window.location.href = "cart.html";
 }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+        
+            hamburger.addEventListener('click', () => {
+                navbar.classList.toggle('show');
+            });
+        });
 
    
 </script>

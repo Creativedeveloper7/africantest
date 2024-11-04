@@ -32,20 +32,25 @@
 
 </section>
 
+<br>
 
-<section id="hero">
-  <h3>African Hoodies</h3>
-  <br>
-  
-  <section id="group">
-    <a href="tshirts.html" class="icon-link">
+<section id="banner">
+<img src="pics/Untitled (1440 x 270 px) (9).png" alt="">
+</section>
+<br>
+
+
+
+</section>
+<section id="button-container">
+    <a href="tshirts.html" class="icon-link2">
        
         <button class="shop-now-btn"> Tshirts ></button>
       </a>
  
 
  
-      <a href="Paintings.html" class="icon-link">
+      <a href="Paintings.html" class="icon-link2">
         
         <button class="shop-now-btn"> Painting ></button>
       </a>
@@ -122,7 +127,14 @@
               </div>
       </div>
     </section>
-    <section>
+  </section>
+  <br>
+
+  <section id="banner">
+  <img src="pics/Untitled (1440 x 270 px) (3).png" alt="">
+  </section>
+  <br>
+  
     
   
   
@@ -174,7 +186,15 @@
 
    window.location.href = "cart.html";
 }
-
+document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+        
+            hamburger.addEventListener('click', () => {
+                navbar.classList.toggle('show');
+            });
+        });
+            
 
           </script>
        <script type="module" src="./js.js"></script>

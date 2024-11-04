@@ -29,10 +29,13 @@
     </div>
 </section>
 <div>
-<section id="hero">
-    <h3>Our Collection</h3>
-    <br>
-</section>
+  <br>
+
+  <section id="banner">
+  <img src="pics/Untitled (1440 x 270 px) (8).png" alt="">
+  </section>
+  <br>
+  
 
   
 
@@ -60,18 +63,26 @@
    
    
    
-   
-   
            </section>
-           <section id="hero3">     
-<header class="header">
-    <img src="POSTERS/LATEST COLLECTION.png" class="header-img">
-  </header>
-</section>
-
+           <br><br><br>
+           <section id="banner">
+            <img src="pics/Untitled (1440 x 270 px) (3).png" alt="">
+            </section>
+            <br><br><br>
+           
 
 
 
 
   
-    <script type="module" src="./js.js"></script>
+    <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+        
+            hamburger.addEventListener('click', () => {
+                navbar.classList.toggle('show');
+            });
+        });
+            
+    </script>

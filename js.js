@@ -154,3 +154,11 @@ function updateSubtotal() {
 
     document.getElementById("cart-subtotal").innerHTML = `Subtotal: Ksh ${subtotal}`;
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+
+    hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('show');
+    });
+});

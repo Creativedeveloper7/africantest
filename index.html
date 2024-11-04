@@ -37,28 +37,38 @@
  
 <section id="video-background">
 
-    <div class="content">
+    <section class="content">
         <div class="video-container2">
             <!-- Background video -->
             <video autoplay loop muted>
-                <source src="videos/Untitled design (6).mp4" type="video/mp4"> <!-- Add your video file here -->
+                <source src="videos/Untitled design (7).mp4" type="video/mp4"> <!-- Add your video file here -->
                 Your browser does not support the video tag.
             </video>   
-        <div>
         </div>
-<br><br><br>
-<div id="hero">
-    <h1> African Best</h1>
-    <p> Art, Culture & Lifestyle</p>
+        <br>
+        <div>
 
- 
-<br>
+            <section id="banner">
+                <video src="video slides/African Best (2).mp4" autoplay muted loop></video>
+            </section>
+            <br>
+     
+      
+<div id="index">
+
+    <br><br>
     <p>Welcome to African Best, your ultimate destination for exploring the rich tapestry of African foods, culture, nutrition, and traditions. Join me on a journey as I delve into the vibrant flavours, captivating stories, and timeless wisdom that define the essence of Africa.</p>
-    
+</div>
+<br><br>  <br><br>
+<div id="index">
+    <br><br>
+    <h1>  Working toward a stronger future</h1>
+    </div>
+    <br>
+    <div id="index">
+    <br><br>
+    <h2>Shaping Africa’s Future Through Tradition and Innovation</h2>
 
-<div id="footer">
-<div id="button">
-<h3>Explore Now</h3> 
 </div>
 
     
@@ -76,6 +86,18 @@
 
 
         <script src="scripts/js.js"></script>
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+        
+            hamburger.addEventListener('click', () => {
+                navbar.classList.toggle('show');
+            });
+        });
+            
+         </script>
         <script type="module" src="./js.js"></script>
 </body>
 </html>

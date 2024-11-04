@@ -28,20 +28,19 @@
 </section>
 
 <!-- Hero Section -->
-<section id="hero">
-    <h3>African Tshirts</h3>
+<section id="banner">
+    <img src="pics/Untitled (1440 x 270 px) (12).png" alt="">
+    </section>
     <br>
-    <section id="group">
+    <section id="button-container">
     
-    
-      
      
-          <a href="Hoodies.html" class="icon-link">
+          <a href="Hoodies.html" class="icon-link2">
             
             <button class="shop-now-btn">Hoodies ></button>
           </a>
      
-          <a href="Paintings.html" class="icon-link">
+          <a href="Paintings.html" class="icon-link2">
             
             <button class="shop-now-btn"> Painting ></button>
           </a>
@@ -91,8 +90,14 @@
             </div>
         </div>
     </section>
-    
-<section>
+</section>
+<br>
+
+<section id="banner">
+<img src="pics/Untitled (1440 x 270 px) (3).png" alt="">
+</section>
+<br>
+
 <!-- Footer -->
 <footer>
     <p>© 2024 African Best. All Rights Reserved.</p>
@@ -142,8 +147,16 @@ const products = [
 }
 
 
-</script>
-<script type="module" src="./js.js">
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+        
+            hamburger.addEventListener('click', () => {
+                navbar.classList.toggle('show');
+            });
+        });
+            
 </script>
 </body>
 </html>
+                      
