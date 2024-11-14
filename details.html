@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Details - African Best</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <section id="Header3">
+        <a href="index.html">
+            <img src="pics/Untitled design.png" class="logo" alt="African Best Logo">
+        </a>
+        
+        <div>
+            <div class="hamburger" id="hamburger">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Trending</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Banner Section -->
+    <section id="banner">
+        <img src="pics/Untitled (1440 x 270 px) (6).png" alt="">
+    </section>
+    <br><br>
+
+    <!-- Article Details Section -->
+    <section id="article-details" class="container">
+        <h1 id="article-title">Loading...</h1>
+        <img id="article-image" src="" alt="Article Image">
+        <p id="article-content">Fetching article details...</p>
+    </section>
+
+    <section id="blogs">
+        <div class="container">
+            <h2>Other Stories</h2>
+            <div class="blog-grid">
+                <!-- Blog cards will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <!-- Contact Details -->
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><strong>Phone:</strong>+254 727 284380</li>
+                    <li><strong>Email:</strong> africanproducts2024@gmail.com</li>
+                    <li><strong>Address:</strong> 44 Westlands, Nairobi</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Stay updated with the latest news, offers, and more.</p>
+                <form action="#" method="POST" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 African Best. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hamburger menu functionality
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+
+            if (hamburger && navbar) {
+                hamburger.addEventListener('click', () => {
+                    navbar.classList.toggle('show'); // Toggles the "show" class on the navbar
+                });
+            }
+
+            // Fetch the article ID from the query string
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const articleId = urlParams.get('articleId');
+
+            if (!articleId) {
+                document.getElementById('article-content').textContent = "Article not found.";
+                return;
+            }
+
+            // Fetch article data from articles.json
+            fetch('articles.json')
+                .then(response => response.json())
+                .then(data => {
+                    const article = data.articles[articleId];
+
+                    if (article) {
+                        // Populate the page with article data
+                        document.getElementById('article-title').textContent = article.title;
+                        document.getElementById('article-image').src = article.image;
+                        document.getElementById('article-content').textContent = article.content;
+                    } else {
+                        document.getElementById('article-content').textContent = "Article not found.";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching article:', error);
+                    document.getElementById('article-content').textContent = "An error occurred while loading the article.";
+                });
+                fetch('articles.json')
+            .then(response => response.json())
+            .then(data => {
+                const blogGrid = document.querySelector('.blog-grid');
+                data.articles.forEach((article, index) => {
+                    const blogCard = `
+                        <div class="blog-card">
+                            <img src="${article.image}" alt="${article.title}">
+                            <h3>${article.title}</h3>
+                            <p class="hidden-paragraph">${article.summary}</p>
+                            <a href="details.html?articleId=${index}" class="read-more">Read More</a>
+                        </div>
+                    `;
+                    blogGrid.innerHTML += blogCard;
+                });
+            })
+            .catch(error => console.error('Error loading articles:', error));
+        });
+    </script>
+</body>
+</html>

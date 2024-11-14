@@ -1,103 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF8">
-    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>African Best</title>
     <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+<div>
 
+    <!-- Header Section with Logo and Navbar -->
+    <header id="Header3">
+        <a href="index.html">
+            <img src="pics/Untitled design.png" class="logo" alt="African Best Logo">
+        </a>
 
-<body>
-
-
-<section id="Header">
-    <a href="index.html"><img src="pics/Untitled design.png" class="logo" alt="African Best Logo"></a>
-<div><div class="hamburger" id="hamburger">
-    <i class="fas fa-bars"></i>
-</div>
-      <!-- Navbar -->
-       <div>
-       <ul id="navbar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Trending</a></li>
-            <li><a href="Videos.html">Videos</a></li>
-            <li><a href="Shop.html">Shop</a></li>
-            <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
-        </ul>
-    </div>
-     <!-- Hamburger Icon -->
-  
-  </div>
-</div>
-</section>
-
- 
-<section id="video-background">
-
-    <section class="content">
-        <div class="video-container2">
-            <!-- Background video -->
-            <video autoplay loop muted>
-                <source src="videos/Untitled design (7).mp4" type="video/mp4"> <!-- Add your video file here -->
-                Your browser does not support the video tag.
-            </video>   
+        <!-- Hamburger Icon for Mobile Navigation -->
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
         </div>
-        <br>
-        <div>
+        <div id="nav-menu" class="hidden">
 
-            <section id="banner">
-                <video src="video slides/African Best (2).mp4" autoplay muted loop></video>
-            </section>
-            <br>
-     
-      
-<div id="index">
+            <div class="close-btn" id="close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <!-- Your navigation links go here -->
+        </div>
 
-    <br><br>
-    <p>Welcome to African Best, your ultimate destination for exploring the rich tapestry of African foods, culture, nutrition, and traditions. Join me on a journey as I delve into the vibrant flavours, captivating stories, and timeless wisdom that define the essence of Africa.</p>
+        <!-- Navbar Links -->
+        <nav>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Trending</a></li>
+                <li><a href="Videos.html">Videos</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </nav>
+    </header>
 </div>
-<br><br>  <br><br>
-<div id="index">
-    <br><br>
-    <h1>  Working toward a stronger future</h1>
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <video autoplay muted loop class="background-video">
+            <source src="videos/Untitled design (6).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="hero-content">
+            <h1>Experience the Heart of Africa:</h1>
+            <h4> Culture, Tradition, and Artistry Delivered to You.</h4> 
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <!-- Trip Packages Section -->
+        <div class="trip-packages scroll-over">
+            <h2>African Best</h2>
+            <p>
+                Welcome to African Best, your ultimate destination for exploring the rich tapestry of African foods, culture, nutrition, and traditions. Join us on a journey to delve into the vibrant flavors, captivating stories, and timeless wisdom that define the essence of Africa.
+            </p>
+            <div class="image-gallery">
+                <div class="image-container" onclick="showPopup('Explore Products', 'Browse a wide variety of authentic African products, from traditional crafts to modern designs, showcasing the continent\'s creativity and heritage.')">
+                    <div class="image-title">Explore Products</div>
+                    <img src="homepage images/rigel-WUYprauUJik-unsplash.jpg" alt="Beach Relaxation">
+                </div>
+                <div class="image-container" onclick="showPopup('Discover African Culture', 'Immerse yourself in the rich and diverse traditions, music, art, and rituals that define African culture.')">
+                    <div class="image-title">Discover African Culture</div>
+                    <img src="homepage images/SAND.png" alt="Adventure Tour">
+                </div>
+                <div class="image-container" onclick="showPopup('Plan Your African Adventure', 'Embark on a journey to explore the beauty, wildlife, and landscapes of Africa while connecting with its vibrant culture.')">
+                    <div class="image-title">Plan Your African Adventure</div>
+                    <img src="homepage images/CAMEL.png" alt="Couple on Vacation">
+                </div>
+            </div>
+            
+    </section>
+    <hr class="separator">
+    
+    <!-- Additional Sections -->
+    <div class="hero4">
+        <h1>Essence of Africa: Celebrating Culture and Tradition</h1>
+        <h3> Unveiling the timeless traditions, stories, and artistry that shape Africa’s vibrant identity.</h3>
     </div>
-    <br>
-    <div id="index">
-    <br><br>
-    <h2>Shaping Africa’s Future Through Tradition and Innovation</h2>
 
-</div>
+    <div class="grid">
+        <div class="card" onclick="showPopup('Traditional Art and Craft', 'African Best celebrates the richness of traditional African art and craft by showcasing authentic creations that reflect the continent\'s cultural heritage. This includes vibrant textiles like kente and mud cloth, intricate beadwork, hand-carved sculptures, pottery, basketry, and traditional jewelry. The content highlights the deep symbolism, storytelling, and craftsmanship behind these pieces, emphasizing their connection to African history, identity, and community life. It also features insights into the artisans\' techniques, materials, and cultural significance, inspiring appreciation for Africa\'s diverse artistic traditions.')">
+            <div class="slideshow">
+                <img src="homepage images/stephen-audu-iQtENMJYXFQ-unsplash.jpg" alt="Traditional Art">
+                <img src="homepage images/jabber-visuals-jvJSJP3zfrA-unsplash.jpg" alt="Traditional Art">
+            </div>
+            <p>🌍 Traditional Art and Craft</p>
+        </div>
+    
+        <div class="card" onclick="showPopup('African Culinary Heritage', 'Explore the rich flavors and unique culinary traditions of Africa. Learn about iconic dishes, indigenous ingredients, and the cultural stories behind them.')">
+            <div class="slideshow">
+                <img src="homepage images/ali-mkumbwa-SbPAVmMQSi8-unsplash.jpg" alt="African Culinary Heritage">
+                <img src="homepage images/ali-mkumbwa-VhYvF2XaRuI-unsplash.jpg" alt="African Culinary Heritage">
+            </div>
+            <p>📚 African Culinary Heritage</p>
+        </div>
+    
+        <div class="card" onclick="showPopup('African Festivals and Rituals', 'Dive into the vibrant festivals and sacred rituals that showcase Africa\'s diverse cultures and traditions. Discover how these events foster community and heritage.')">
+            <div class="slideshow">
+                <img src="homepage images/ransford-quaye-RCAUud6Wcmo-unsplash.jpg" alt="African Festivals and Rituals">
+                <img src="homepage images/omotayo-tajudeen-tredopTaqQM-unsplash.jpg" alt="African Festivals and Rituals">
+            </div>
+            <p>🛍️ African Festivals and Rituals</p>
+        </div>
+    
+        <div class="card" onclick="showPopup('Language and Storytelling Traditions', 'Uncover the rich oral traditions and diverse languages that preserve Africa\'s history, myths, and wisdom for future generations.')">
+            <div class="slideshow">
+                <img src="homepage images/sneha-cecil-jUazhgeesgM-unsplash.jpg" alt="Language and Storytelling Traditions">
+                <img src="homepage images/ar-md-afnan-hossain-cTgf5YGHeXA-unsplash.jpg" alt="Language and Storytelling Traditions">
+            </div>
+            <p>🤝 Language and Storytelling Traditions</p>
+        </div>
+    
+        <div class="card" onclick="showPopup('Mining & Resources', 'Learn about Africa\'s wealth in natural resources, including its minerals, and the sustainable efforts to utilize them for economic growth.')">
+            <div class="slideshow">
+                <img src="homepage images/dominik-vanyi-1HEDPbH6HIE-unsplash.jpg" alt="Mining & Resources">
+                <img src="homepage images/dominik-vanyi-Mk2ls9UBO2E-unsplash.jpg" alt="Mining & Resources">
+            </div>
+            <p>🍲 Mining & Resources</p>
+        </div>
+    </div>
+    
+
+
 
     
-    </div>
+    <hr class="separator">
+   
+    <div class="budget-container">
+       
+        <div class="item grounds">
+            <h1></h1>
+            <h2> TEMBEA KENYA</h2>
+            <p>Kenya is a top tourist destination known for its rich wildlife, diverse landscapes, and vibrant culture. It offers world-renowned safaris, including the Great Migration in the Masai Mara, and is home to the "Big Five." The country’s cultural heritage, with over 40 ethnic groups, is showcased in places like Lamu Island. Kenya’s beautiful beaches, such as Diani and Mombasa, attract visitors for relaxation and water sports. The country is also a leader in eco-tourism, combining adventure with sustainability. Historical sites like Fort Jesus and Gedi Ruins further enrich Kenya’s appeal to travelers.</p>
+        </div>
+        <div class="item campaign">
+            <h1></h1>
+            <h2> VISIT TANZANIA</h2>
+            <p>Tanzania is a premier tourist destination in East Africa, known for its stunning natural landscapes and rich cultural heritage. It boasts iconic attractions like Mount Kilimanjaro, Africa's highest peak, and Serengeti National Park, famous for the Great Migration. The island of Zanzibar offers pristine beaches, historical sites, and a blend of African, Arab, and European influences. Tanzania also features the Ngorongoro Crater, a UNESCO World Heritage site, and rich wildlife experiences in Selous and Ruinsori National Parks. Visitors can explore traditional cultures, vibrant markets, and enjoy safaris, trekking, and coastal relaxation, making it an unforgettable adventure..<br></p>
+        </div>
+        <div class="item sound">
+            <h1></h1>
+            <h2> VISIT UGANDA</h2>
+            <p>Uganda, known as the "Pearl of Africa," is a diverse and captivating tourism destination in East Africa. It offers a blend of wildlife, natural beauty, and cultural heritage. Key attractions include Bwindi Impenetrable Forest, home to mountain gorillas, and Queen Elizabeth National Park, famous for its tree-climbing lions and diverse wildlife. Uganda’s Rwenzori Mountains and Lake Victoria provide breathtaking landscapes for trekking and water activities. The country also boasts rich cultural experiences, vibrant markets, and a welcoming atmosphere. With its stunning national parks, wildlife, and warm people, Uganda is perfect for adventure, nature, and cultural tourism..</p>
+        </div>
+</div>
+<BR></BR> <BR></BR>
+
+<hr class="separator">
+
+<BR></BR> 
+        <div class="container2">
+            <!-- Left Section: Popular Stories -->
+            <div class="stories-section">
+                <h2>Popular stories</h2>
+                <p>We recommend our customers to share their amazing stories with us. This has proven to be very useful to users who are willing to experience the travel.</p>
+                
+                <div class="story-card">
+                    <img src="homepage images/3.png" alt="Customer Image 1">
+                    <div class="story-text" style="background-color: #E7A90E;">
+                        <p>My journey with African Best was a transformative experience! From exploring traditional Maasai villages to tasting authentic East African cuisine, every moment felt like a deep dive into African culture. The guides were knowledgeable and passionate, making each site visit feel personal and enriching. I came back with a newfound respect for African heritage and memories that will last a lifetime. Highly recommend African Best for anyone wanting an immersive cultural experience!"</p>
+                    </div>
+                </div>
+    
+                <div class="story-card">
+                    <img src="homepage images/G.png" alt="Customer Image 2">
+                    <div class="story-text" style="background-color: #1A455E;">
+                        <p>"African Best took my travel experience to a new level. They curated a perfect blend of cultural tours and interactive workshops, allowing me to not only see but also participate in African art and crafts. Learning from local artisans and joining a vibrant community festival were highlights of my trip. I felt connected to the people and traditions in ways I never imagined possible. Thanks to African Best, I truly experienced the heart of Africa!"</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Right Section: Feature Highlight -->
+            <div class="feature-section">
+                <div class="feature-overlay">
+                    <h2>Tana River</h2>
+                    <a href="#">View More ></a>
+                </div>
+                <img src="homepage images/jeff-ackley-5aLKRDQ026o-unsplash.jpg" alt="River Kongo Background">
+            </div>
+        </div>
+        <BR></BR> 
+        <hr class="separator">
+        <BR></BR> <BR></BR
+        <section id="banner">
+            <video src="video slides/African Best (5).mp4" autoplay muted loop></video>
+        </section>
 
 
+        <hr class="separator">
+      
+        <div class="hero2">
+            <h1>Testimonials</h1>
+            <h3>Our stories, One at a time</h3>
+        </div>
+        <div class="story-card2">
+            <img src="homepage images/KU 1 (1).png" alt="Customer Image 1">
+            
+                <p>“Splendid! My staycation in Kenya was epic, the booking and processing consultation was seamless, I totally recommend”</p>
+            </div>
+        </div>
 
+        <div class="story-card2">
+            <img src="homepage images/o 1.png" alt="Customer Image 2">
+         
+                <p>"African Best took my travel experience to a new level. They curated a perfect blend of cultural tours and interactive workshops, allowing me to not only see but also participate in African art and crafts. Thanks to African Best, I truly experienced the heart of Africa!"</p>
+            </div>
+        </div>
+        <div class="story-card2">
+            <img src="homepage images/327971328_1164823884184199_4760170609289615688_n 1.png" alt="Customer Image 2">
+         
+                <p>“My trip with African Best was beyond expectations! I got to meet local artisans and witness traditional dances that brought the culture to life. The whole experience felt tailored just for me, and I came home with stories I’ll cherish forever."tes"</p>
+            </div>
+        </div>
+        <div class="story-card2">
+            <img src="homepage images/CO 1.png" alt="Customer Image 2">
+         
+                <p>“Thanks to African Best, I gained a deeper understanding of African history and customs. From exploring ancient ruins to learning about African wildlife, every moment was enlightening and engaging. It was an unforgettable journey that I highly recommend!""</p>
+            </div>
+        </div>
 
-
-
-
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <h2 id="popup-title"></h2>
+                <p id="popup-description"></p>
+                <button onclick="closePopup()">Close</button>
+            </div>
         </div>
 
 
 
 
-        <script src="scripts/js.js"></script>
+
+
+
+
+
+
+
+
+        <footer>
+            <div class="footer-container">
+                <!-- Contact Details -->
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><strong>Phone:</strong>+254 727 284380</li>
+                        <li><strong>Email:</strong> africanproducts2024@gmail.com</li>
+                        <li><strong>Address:</strong> 44 Westlands, Nairobi</li>
+                    </ul>
+                </div>
         
-        <script>
+                <!-- Newsletter Section -->
+                <div class="newsletter">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Stay updated with the latest news, offers, and more.</p>
+                    <form action="#" method="POST" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2024 African Best. All rights reserved.</p>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Toggle navbar visibility on hamburger click
             const hamburger = document.getElementById('hamburger');
             const navbar = document.getElementById('navbar');
-        
+            
             hamburger.addEventListener('click', () => {
                 navbar.classList.toggle('show');
             });
+    
+            // Initialize each card's slideshow
+            document.querySelectorAll(".slideshow").forEach((slideshow) => {
+                const images = slideshow.querySelectorAll("img");
+                let currentIndex = 0;
+    
+                // Cycle through images every 4 seconds
+                setInterval(() => {
+                    images[currentIndex].classList.remove("active");
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].classList.add("active");
+                }, 3000);
+            });
         });
-            
-         </script>
-        <script type="module" src="./js.js"></script>
-</body>
-</html>
+        function showPopup(title, description) {
+            document.getElementById('popup-title').innerText = title;
+            document.getElementById('popup-description').innerText = description;
+            document.getElementById('popup').classList.add('active');
+        }
+
+        // Function to close popup
+        function closePopup() {
+            document.getElementById('popup').classList.remove('active');
+        }
+
+    </script>
+
+    
