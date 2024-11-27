@@ -35,7 +35,10 @@
         <img src="pics/Untitled (1440 x 270 px) (6).png" alt="">
     </section>
     <br><br>
-   
+    <div class="search-container">
+        <input type="text" placeholder="Search...">
+        <i class="fas fa-search"></i>
+    </div>
     <!-- Blog Section -->
     <section id="blogs">
         <div class="container">
@@ -107,4 +110,40 @@
             })
             .catch(error => console.error('Error loading articles:', error));
     });
+    document.addEventListener('DOMContentLoaded', () => {
+    // ScrollReveal Initialization for #blogs section
+    ScrollReveal().reveal('#blogs', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1000,
+        delay: 200,
+        reset: false,
+    });
+
+    ScrollReveal().reveal('#blogs h2', {
+        origin: 'left',
+        distance: '50px',
+        duration: 1000,
+        delay: 300,
+        reset: false,
+    });
+
+    ScrollReveal().reveal('.blog-grid', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1000,
+        delay: 400,
+        reset: false,
+    });
+
+    // Reveal each blog card with a staggered effect
+    ScrollReveal().reveal('.blog-grid .blog-card', {
+        origin: 'bottom',
+        distance: '30px',
+        duration: 800,
+        delay: 500,
+        interval: 200, // Stagger the reveal of each card
+        reset: false,
+    });
+});
 </script>

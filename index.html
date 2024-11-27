@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <div>
 
@@ -42,7 +43,9 @@
             </ul>
         </nav>
     </header>
+    
 </div>
+
     <!-- Hero Section with Video Background -->
     <section class="hero">
         <video autoplay muted loop class="background-video">
@@ -53,15 +56,14 @@
         <div class="hero-content">
             <h1>Experience the Heart of Africa:</h1>
             <h4> Culture, Tradition, and Artistry Delivered to You.</h4> 
-            <div class="search-container">
-                <input type="text" placeholder="Search...">
-                <i class="fas fa-search"></i>
-            </div>
+            
+          
         </div>
 
         <!-- Trip Packages Section -->
         <div class="trip-packages scroll-over">
             <h2>African Best</h2>
+            
             <p>
                 Welcome to African Best, your ultimate destination for exploring the rich tapestry of African foods, culture, nutrition, and traditions. Join us on a journey to delve into the vibrant flavors, captivating stories, and timeless wisdom that define the essence of Africa.
             </p>
@@ -284,40 +286,158 @@
 
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Toggle navbar visibility on hamburger click
-            const hamburger = document.getElementById('hamburger');
-            const navbar = document.getElementById('navbar');
-            
-            hamburger.addEventListener('click', () => {
-                navbar.classList.toggle('show');
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Toggle navbar visibility on hamburger click
+                const hamburger = document.getElementById('hamburger');
+                const navbar = document.getElementById('navbar');
+                
+                hamburger.addEventListener('click', () => {
+                    navbar.classList.toggle('show');
+                });
+        
+                // Initialize each card's slideshow
+                document.querySelectorAll(".slideshow").forEach((slideshow) => {
+                    const images = slideshow.querySelectorAll("img");
+                    let currentIndex = 0;
+        
+                    // Cycle through images every 4 seconds
+                    setInterval(() => {
+                        images[currentIndex].classList.remove("active");
+                        currentIndex = (currentIndex + 1) % images.length;
+                        images[currentIndex].classList.add("active");
+                    }, 3000);
+                });
+        
+                // ScrollReveal Initialization
+                ScrollReveal().reveal('.hero-content', {
+                    origin: 'left',
+                    distance: '50px',
+                    duration: 1000,
+                    delay: 200,
+                });
+        
+                ScrollReveal().reveal('.trip-packages h2, .trip-packages p', {
+                    origin: 'bottom',
+                    distance: '50px',
+                    duration: 1000,
+                    delay: 300,
+                });
+        
+                ScrollReveal().reveal('.image-gallery .image-container', {
+                    interval: 200,
+                    origin: 'top',
+                    distance: '30px',
+                    duration: 800,
+                });
+        
+                ScrollReveal().reveal('.item', {
+                    distance: '50px',
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    opacity: 0,
+                    origin: 'bottom',
+                    interval: 200, // Delay between each reveal
+                    reset: false, // Animation only occurs once
+                });
+        
+                // Reveal effect for the hero section
+                ScrollReveal().reveal('.hero4 h1, .hero4 h3', {
+                    distance: '60px',
+                    origin: 'top',
+                    duration: 1000,
+                    opacity: 0,
+                    easing: 'ease-in-out',
+                    interval: 100,
+                });
+        
+                // Reveal effect for grid cards
+                ScrollReveal().reveal('.grid .card', {
+                    distance: '50px',
+                    origin: 'bottom',
+                    duration: 800,
+                    opacity: 0,
+                    easing: 'ease-in-out',
+                    interval: 200, // Adds staggered effect
+                });
             });
-    
-            // Initialize each card's slideshow
-            document.querySelectorAll(".slideshow").forEach((slideshow) => {
-                const images = slideshow.querySelectorAll("img");
-                let currentIndex = 0;
-    
-                // Cycle through images every 4 seconds
-                setInterval(() => {
-                    images[currentIndex].classList.remove("active");
-                    currentIndex = (currentIndex + 1) % images.length;
-                    images[currentIndex].classList.add("active");
-                }, 3000);
-            });
-        });
-        function showPopup(title, description) {
-            document.getElementById('popup-title').innerText = title;
-            document.getElementById('popup-description').innerText = description;
-            document.getElementById('popup').classList.add('active');
-        }
+        
+            // Function to show popup
+            function showPopup(title, description) {
+                document.getElementById('popup-title').innerText = title;
+                document.getElementById('popup-description').innerText = description;
+                document.getElementById('popup').classList.add('active');
+            }
+        
+            // Function to close popup
+            function closePopup() {
+                document.getElementById('popup').classList.remove('active');
+            }
+            ocument.addEventListener('DOMContentLoaded', () => {
+    // Reveal effect for the stories section
+    ScrollReveal().reveal('.stories-section h2', {
+        distance: '50px',
+        origin: 'top',
+        duration: 800,
+        opacity: 0,
+        easing: 'ease-in-out',
+        delay: 200,
+    });
 
-        // Function to close popup
-        function closePopup() {
-            document.getElementById('popup').classList.remove('active');
-        }
+    ScrollReveal().reveal('.stories-section p', {
+        distance: '40px',
+        origin: 'left',
+        duration: 800,
+        opacity: 0,
+        easing: 'ease-in-out',
+        delay: 300,
+    });
 
-    </script>
+    ScrollReveal().reveal('.story-card', {
+        distance: '50px',
+        origin: 'bottom',
+        duration: 800,
+        opacity: 0,
+        easing: 'ease-in-out',
+        interval: 200, // Adds staggered effect for each story card
+    });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    // ScrollReveal Initialization
+    ScrollReveal().reveal('.container2', {
+        origin: 'bottom',
+        distance: '50px',
+        duration: 1000,
+        delay: 200,
+        reset: false,
+    });
+
+    ScrollReveal().reveal('.stories-section h2', {
+        origin: 'left',
+        distance: '50px',
+        duration: 1000,
+        delay: 300,
+        reset: false,
+    });
+
+    ScrollReveal().reveal('.stories-section p', {
+        origin: 'left',
+        distance: '50px',
+        duration: 1000,
+        delay: 400,
+        reset: false,
+    });
+
+    ScrollReveal().reveal('.story-card', {
+        origin: 'bottom',
+        distance: '30px',
+        duration: 800,
+        delay: 500,
+        interval: 200, // Adds staggered effect
+        reset: false,
+    });
+});
+        </script>
+        
 
     

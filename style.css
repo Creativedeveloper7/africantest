@@ -24,29 +24,65 @@
     position: fixed;
 }
 
-.search-container {
-  position: relative;
-  width: 300px;
-}
-.search-container input {
-  width: 100%;
-  padding: 10px 40px 10px 20px;
+..search-container {
+  display: flex;
+  align-items: center;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 12px;
-color: #eaeaea;
-  outline: none;
-  background-color: #e0e0e0f1;
+  border-radius: 25px;
+  padding: 5px 15px;
+  max-width: 100%;
+  width: 300px; /* Set a default width */
+  margin: 0 auto;
 }
+
+.search-container input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+margin-bottom: 20px;
+
+}
+
 .search-container i {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
   color: #ffffff;
+  font-size: 1.2rem;
   cursor: pointer;
-  font-size: 300;
+  margin-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .search-container {
+      width: 80%; /* Adjust width for smaller screens */
+      padding: 8px;
+  }
+
+  .search-container input {
+      font-size: 0.9rem; /* Slightly smaller font size */
+      padding: 8px;
+  }
+
+  .search-container i {
+      font-size: 1rem;
+      position: relative
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .search-container {
+      width: 90%; /* Further adjust width for very small screens */
+      padding: 6px;
+  }
+
+  .search-container input {
+      font-size: 0.8rem; /* Smaller font size for very small screens */
+      padding: 6px;
+  }
+
+  .search-container i {
+      font-size: 10px; /* Adjust icon size */
+  }
 }
 /* Links in the Header */
 .popup {
@@ -91,7 +127,45 @@ color: #eaeaea;
   background-color: #dd6f15;
 }
 
+@media screen and (max-width: 768px) {
+  .popup-content {
+      width: 90%; /* Make the popup content take more width on smaller screens */
+      padding: 15px;
+  }
 
+  .popup-content h2 {
+      font-size: 1.3rem; /* Adjust header size */
+  }
+
+  .popup-content p {
+      font-size: 0.9rem; /* Adjust paragraph size */
+  }
+
+  .popup-content button {
+      font-size: 0.9rem; /* Adjust button size */
+      padding: 8px 16px; /* Adjust button padding */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup-content {
+      width: 95%; /* Make the popup content take nearly all the screen width on small devices */
+      padding: 10px;
+  }
+
+  .popup-content h2 {
+      font-size: 1.1rem; /* Smaller header size for very small screens */
+  }
+
+  .popup-content p {
+      font-size: 0.85rem; /* Adjust text size for smaller screens */
+  }
+
+  .popup-content button {
+      font-size: 0.8rem; /* Smaller button text */
+      padding: 6px 12px; /* Adjust button padding for very small screens */
+  }
+}
 
 
 
@@ -105,6 +179,19 @@ color: #eaeaea;
       flex-direction: column;
       gap: 10px;
   }
+  .search-container input {
+    width: 100%;
+    padding: 10px 20px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 9px;
+  color: #eaeaea;
+    outline: none;
+    background-color: #e0e0e0f1;
+  }
+
+
+  
 }
 
 
@@ -1415,44 +1502,46 @@ font-size: 24px;
 @media (max-width: 768px) {
   /* Hide the navbar by default on small screens */
   #navbar {
-      display: none;
-      top: 0px; /* Adjust based on your header height */
-   position: absolute;
-   padding: 40px 10px; /* Spacing for desktop */
-   text-align: left; /* Align text for desktop */
-   margin-bottom: 20px;
-   background-color: rgba(245, 245, 245, 0.8); /* Add a background to the navbar */
+    display: none;
+    top: 0; /* Adjust based on your header height */
+    position: absolute;
+    padding: 60px 20px; /* Increased padding for a larger appearance */
+    text-align: left;
+    margin-bottom: 30px;
+    background-color: rgba(245, 245, 245, 0.9); /* Slightly more opaque */
   }
-
+  
   /* Show the navbar when the 'show' class is added */
   #navbar.show {
-      display: flex;
+    display: flex;
   }
-
-  /* Show the hamburger icon in mobile view */
+  
+  /* Ensure the hamburger icon is easy to access */
   .hamburger {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px; /* Adjusted for larger appearance */
+    right: 30px; /* Increased right padding */
     cursor: pointer;
-}
-
+    font-size: 28px; /* Increased icon size */
+  }
+  
   /* Ensure navbar items stack vertically on mobile */
   #navbar li {
-    padding: 20 15px; /* Spacing for desktop */
-    text-align: left; /* Align text for desktop */
-      position: relative;
-     font-weight: 600;
-      text-align: center;
-      border-bottom: #008080;
-      color:#969696;
-      border-bottom:0.1px solid #181818;
-      gap: 60px;
-      padding: 200 15px; /* Spacing for desktop */
-        ; /* Align text for desktop */
-        margin-bottom: 0
-
-}
+    padding: 30px 20px; /* Increased padding for a larger clickable area */
+    text-align: center; /* Centered for better visual alignment */
+    font-weight: 700; /* Slightly bolder text */
+    font-size: 24px; /* Increased font size */
+    color: #565656; /* Darker text for better visibility */
+    border-bottom: 1px solid #ccc; /* Improved border visibility */
+    gap: 80px; /* Increased spacing between items */
+    margin-bottom: 10px; /* Added some vertical spacing */
+  }
+  
+  /* Optional: Make navbar background taller */
+  #navbar li:last-child {
+    margin-bottom: 20px;
+  }
+  
 
   
 .logo{
@@ -1500,7 +1589,7 @@ body {
 /* Grid Container */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   max-width: 1600px;
   margin: 0 auto;
@@ -1540,6 +1629,9 @@ body {
   font-weight: bold;
 }
 
+
+
+
 /* Responsive Adjustments */
 @media (max-width: 600px) {
   .video-container iframe {
@@ -1559,6 +1651,7 @@ body {
     }
 
   }
+
   
 
   
