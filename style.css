@@ -269,7 +269,19 @@ padding-top: 100px;
   border-radius: 4px;
 
 }
+@media screen and (max-width: 768px) {
+  .background-video {
+      height: 100%; /* Ensure the video adjusts for smaller screens */
+      width: auto; /* Maintain aspect ratio if width is more constrained */
+  }
+}
 
+@media screen and (max-width: 480px) {
+  .background-video {
+      height: auto; /* Allow more flexibility on very small devices */
+      min-height: 100vh; /* Ensure it still fills the viewport */
+  }
+}
 .hero3 {
   display: flex;
   flex-direction: row;
@@ -796,6 +808,7 @@ card-link {
   font-size: 2rem;
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 
@@ -812,11 +825,40 @@ card-link {
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
 }
+@media (min-width: 480px) {
+  #article-details .container {
+    max-width: 90%; /* Limit width for small tablets */
+    margin: 0 auto;
+  }
+
+  #article-details h1 {
+    font-size: 20px; /* Slightly larger font size on small tablets */
+  }
+
+  #article-details p {
+    font-size: 12px; /* Increase readability on small tablets */
+  }
+}
+
+@media (min-width: 768px) {
+  #article-details .container {
+    max-width: 800px; /* Restore original max-width for larger screens */
+  }
+
+  #article-details h1 {
+    font-size: 20px; /* Original font size */
+  }
+
+  #article-details p {
+    font-size: 12px; /* Restore original font size */
+    ; /* Restore original line-height */
+  }
+}
 
 
 /* Blogs Section */
 #blogs {
-  padding: 60px 20px;
+  padding: 20px;
   background-color: #f9f9f9;
 }
 
@@ -910,6 +952,33 @@ card-link {
   background-color:#008080;
   color: #ffffff;
 }
+
+@media (min-width: 480px) {
+  .blog-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  #blogs h2 {
+    font-size: 2rem; /* Larger screens can have the original font size */
+  }
+
+  .blog-grid {
+    gap: 20px; /* Restore original gap for larger screens */
+  }
+
+  .blog-card img {
+    height: 200px; /* Restore original image height */
+  }
+}
+
+
+
+
+
+
+
 
 /* Article Details Section */
 /* Article Details Section */
