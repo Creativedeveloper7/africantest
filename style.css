@@ -827,17 +827,20 @@ card-link {
 }
 @media (min-width: 480px) {
   #article-details .container {
-    max-width: 90%; /* Limit width for small tablets */
+    max-width: 100%; /* Limit width for small tablets */
     margin: 0 auto;
   }
 
   #article-details h1 {
-    font-size: 20px; /* Slightly larger font size on small tablets */
+    font-size: 30px; /* Slightly larger font size on small tablets */
   }
 
   #article-details p {
     font-size: 12px; /* Increase readability on small tablets */
-  }
+
+ line-height: normal;
+ font-family: Arial, Helvetica, sans-serif;
+}
 }
 
 @media (min-width: 768px) {
@@ -1545,7 +1548,7 @@ font-size: 24px;
 
 .hamburger i {
   font-size: 20px;
-  color: #ddd;
+  color: #008080;
 }
 
 /* Media query for mobile devices */
@@ -1573,6 +1576,7 @@ font-size: 24px;
     right: 30px; /* Increased right padding */
     cursor: pointer;
     font-size: 28px; /* Increased icon size */
+    z-index: 2; /* Ensure it stays above other content */
   }
   
   /* Ensure navbar items stack vertically on mobile */
@@ -1595,8 +1599,9 @@ font-size: 24px;
 
   
 .logo{
-    width: 50px;
+    width: 100px;
     height: auto;
+    position: absolute;
 }
 
 
