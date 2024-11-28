@@ -858,13 +858,13 @@ card-link {
 
 /* Blogs Section */
 #blogs {
-  padding: 20px;
-  background-color: #f9f9f9;
+  padding: 1px;
+  background-color: #ffffff;
 }
 
 #blogs .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
 }
 
@@ -925,17 +925,17 @@ card-link {
 }
 
 .blog-card p {
-  font-size: 0.95rem;
-  margin: 0 15px 15px;
-  color: #666;
-  line-height: 1.4;
+  font-size: 12px;
+  margin: 0 5px 5px;
+  color: #575757;
+;
   font-family: 'Montserrat', sans-serif;
 }
 
 
 .blog-card .read-more {
   display: inline-block;
-  margin: 0 15px 15px;
+  margin: 0 5px 5px;
   padding: 10px 20px;
  
   color:#008080;
@@ -953,25 +953,6 @@ card-link {
   color: #ffffff;
 }
 
-@media (min-width: 480px) {
-  .blog-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-}
-
-@media (min-width: 768px) {
-  #blogs h2 {
-    font-size: 2rem; /* Larger screens can have the original font size */
-  }
-
-  .blog-grid {
-    gap: 20px; /* Restore original gap for larger screens */
-  }
-
-  .blog-card img {
-    height: 200px; /* Restore original image height */
-  }
-}
 
 
 
@@ -984,9 +965,9 @@ card-link {
 /* Article Details Section */
 #article-details {
   max-width: 800px;
-  margin: 70px auto;
-  background: #fff;
-  padding: 20px;
+  margin:  auto;
+  background: #ffffff;
+  padding: 5px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -994,7 +975,7 @@ card-link {
 #article-details h1 {
   font-size: 30px;
   margin-bottom: 20px;
-  color:#1A1A1D;
+  color:#292929;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 
@@ -1003,15 +984,15 @@ card-link {
 #article-details img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 5px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #article-details p {
-  font-size: 15px;
- margin: 20px;
-  color: #444;
+  font-size: 13px;
+ margin: 10px;
+  color: #1b1b1b;
   font-family: 'Montserrat', sans-serif;
 }
 
