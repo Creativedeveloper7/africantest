@@ -1243,22 +1243,22 @@ text-align: start;
   
   @media (max-width: 480px) {
     #details-title {
-        font-size: 1.5rem;
+        font-size:20px;
     }
     #details-content {
         font-size: 0.95rem;
     }
     #article-details {
-      max-width: 800px;
+      max-width: 1200px;
       margin: 40px auto;
       background: #fff;
       padding: 20px;
-      border-radius: 8px;
+      border-radius: 3px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
     #article-details h1 {
-      font-size: 15px;
+      font-size: 18px;
       margin-bottom: 20px;
       color:#1A1A1D;
       font-family: 'Montserrat', sans-serif;
@@ -1275,7 +1275,7 @@ text-align: start;
     
     #article-details p {
       font-size: 1.2rem;
-      line-height: 1.8;
+      font-family: 'Montserrat', sans-serif;
       color: #444;
     }
   }
