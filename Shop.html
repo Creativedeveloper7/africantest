@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF8">
-    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>African Best</title>
     <link rel="stylesheet" href="style.css">
-   
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
 <body>
-
-</section>
-<section id="Header3">
-  <a href="index.html">
-    <img src="pics/Untitled design.png" class="logo" alt="African Best Logo">
-</a>
+    <!-- Header Section -->
+    <section id="Header3">
+        <a href="index.html">
+            <img src="pics/Untitled design.png" class="logo" alt="African Best Logo">
+        </a>
         <div class="hamburger" id="hamburger">
             <i class="fa fa-bars"></i>
         </div>
@@ -27,90 +26,90 @@
             <li><a href="Shop.html">Shop</a></li>
             <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
         </ul>
-    </div>
-</section>
-<div>
-  <br>
-
-  <section id="banner">
-  <img src="pics/Untitled (1440 x 270 px) (8).png" alt="">
-  </section>
-  <br>
-  
-
-  
-
-</section>
+    </section>
 </div>
+    <!-- Banner Section -->
+    <section id="banner">
+        <img src=" alt="Banner">
+    </section>
 
-<section id="hero3">
-    <div class="icon-link">
-   
-     <!-- Image as an icon linking to another page -->
-     <a href="tshirts.html" class="icon-link">
-       <img src="tshirts/SHATI/young guardian.jpg" alt="shop-now-btn" class="icon-image">
-       <button class="shop-now-btn"> Discover Tshirts</button>
-     </a>
-
-     <a href="Hoodies.html" class="icon-link">
-       <img src="tshirts/SHATI/guardian hoodie.jpg" alt="shop-now-btn" class="icon-image">
-       <button class="shop-now-btn">Discover Hoodies</button>
-     </a>
-
-     <a href="Paintings.html" class="icon-link">
-       <img src="POSTERS/WhatsApp Image 2024-07-22 at 11.10.51_07296d27.jpg" alt="shop-now-btn" class="icon-image">
-       <button class="shop-now-btn">Discover Painting</button>
-     </a>
-   
-   
-   
-           </section>
-           <br><br><br>
-           <section id="banner">
-            <img src="pics/Untitled (1440 x 270 px) (3).png" alt="">
-            </section>
-            <br><br><br>
-           
-            <footer>
-              <div class="footer-container">
-                  <!-- Contact Details -->
-                  <div class="contact-info">
-                      <h3>Contact Us</h3>
-                      <ul>
-                          <li><strong>Phone:</strong>+254 727 284380</li>
-                          <li><strong>Email:</strong> africanproducts2024@gmail.com</li>
-                          <li><strong>Address:</strong> 123 Westlands, Nairobi</li>
-                      </ul>
-                  </div>
-          
-                  <!-- Newsletter Section -->
-                  <div class="newsletter">
-                      <h3>Subscribe to Our Newsletter</h3>
-                      <p>Stay updated with the latest news, offers, and more.</p>
-                      <form action="#" method="POST" class="newsletter-form">
-                          <input type="email" placeholder="Enter your email" required>
-                          <button type="submit">Subscribe</button>
-                      </form>
-                  </div>
-              </div>
-          
-              <div class="footer-bottom">
-                  <p>&copy; 2024 African Best. All rights reserved.</p>
-              </div>
-          </footer>
-          <!-- Main Content Section -->
-
-
-
+    <section class="products-section">
+      <h2>Discover Our Unique Offerings</h2>
+      <div class="product-grid">
+          <div class="product-card">
+              <img src="images/african creatives_.jpeg" alt="Product Name">
+              <button class="cta-button">Discover Tshirts</button>
+          </div>
+          <div class="product-card">
+              <img src="images/african _hoodie,__.jpeg" alt="Product Name">
+              <button class="cta-button">Discover Hoodies</button>
+          </div>
+          <div class="product-card">
+              <img src="images/african tshirt, hoodie, painting__ (1).jpeg" alt="Product Name">
+              <button class="cta-button">Discover Painting</button>
+          </div>
+      </div>
   
+
+
+
+   
+   
+    <!-- Additional Banner Section -->
+    <section id="banner">
+        <img src="pics/Untitled (1440 x 270 px) (3).png" alt="Banner">
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><strong>Phone:</strong> +254 727 284380</li>
+                    <li><strong>Email:</strong> africanproducts2024@gmail.com</li>
+                    <li><strong>Address:</strong> 123 Westlands, Nairobi</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="newsletter">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Stay updated with the latest news, offers, and more.</p>
+                <form action="#" method="POST" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 African Best. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
     <script>
-          document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hamburger menu toggle
             const hamburger = document.getElementById('hamburger');
             const navbar = document.getElementById('navbar');
-        
+
             hamburger.addEventListener('click', () => {
                 navbar.classList.toggle('show');
             });
+
+            // Add event listener to all buttons with the "cta-button" class
+            const ctaButtons = document.querySelectorAll('.cta-button');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default action
+                    alert('Shop Coming Soon on our Halisi app!');
+                });
+            });
         });
-            
     </script>
+</body>
+
+</html>
